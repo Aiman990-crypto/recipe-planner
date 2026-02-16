@@ -1,13 +1,68 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🌟 Smooth Fade Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.animate-fadeUp {
+  animation: fadeUp 0.7s ease forwards;
+}
+
+/* Delay helpers */
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float-card {
+  animation: floatCard 4s ease-in-out infinite;
+}
+
+/* Move pagination dots downward */
+.swiper-pagination {
+  bottom: -25px; /* adjust spacing as needed */
+}
+
+/* Style pagination bullets */
+.swiper-pagination-bullet {
+  background: #f97316; /* Tailwind orange-500 */
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ea580c; /* Tailwind orange-600 */
+}
+.nav-item {
+  position: relative;
+  padding: 4px 8px;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: 0.3s;
+}
+
+.nav-item:hover::after {
+  width: 100%;
 }

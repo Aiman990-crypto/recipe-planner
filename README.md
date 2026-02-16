@@ -1,70 +1,169 @@
-# Getting Started with Create React App
+# 🍳 Recipe Planner Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern **React Recipe Planner Application** that helps users discover recipes, view detailed cooking instructions, save favorites, and plan meals — all with a clean UI and smooth animations.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+✅ Browse curated recipes
+✅ Search and filter by category
+✅ View full recipe details (ingredients + instructions)
+✅ Animated recipe transitions using Framer Motion
+✅ Add / Remove favorites (saved in LocalStorage)
+✅ Separate **All Recipes** page
+✅ Responsive design with mobile hamburger menu
+✅ Smooth scrolling navigation
+✅ Modern card-based UI with hover interactions
+✅ Meal Planner page to organize weekly meals
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+* **React.js** — Frontend framework
+* **React Router DOM** — Page routing
+* **Tailwind CSS** — Styling & layout
+* **Framer Motion** — Page & image animations
+* **LocalStorage API** — Favorites persistence
+* **Responsive Design** — Mobile-friendly UI
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1️⃣ Clone the Repository
 
-### `npm run eject`
+```
+git clone <your-repo-link>
+cd recipe-planner
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2️⃣ Install Dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+### 3️⃣ Run Development Server
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+App will run on:
 
-### Code Splitting
+```
+http://localhost:3000
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🔎 How It Works
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 🏠 Home Page
 
-### Making a Progressive Web App
+* Displays a **featured subset** of recipes.
+* Users can search or filter meals.
+* "Explore Recipes" button navigates to full collection.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 📖 Recipe Details Page
 
-### Advanced Configuration
+* Opens when a recipe card is clicked.
+* Shows:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+  * Large animated image
+  * Ingredients list
+  * Step-by-step instructions
+  * Prep time & servings
 
-### Deployment
+### ❤️ Favorites Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* Users can save recipes using the heart icon.
+* Favorites are stored in browser LocalStorage.
 
-### `npm run build` fails to minify
+### 📅 Meal Planner
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Allows planning meals for the week.
+
+---
+
+## 🎨 Animations
+
+Framer Motion is used for:
+
+* Page transitions
+* Image entrance animation
+* Hover scaling effects
+* Smooth UI interactions
+
+---
+
+## 📱 Responsive Design
+
+Includes:
+
+* Mobile hamburger navigation
+* Adaptive grid layouts
+* Touch-friendly UI
+* Optimized spacing for all devices
+
+---
+
+## 💾 Data Handling
+
+Recipes are stored in:
+
+```
+src/data/recipes.js
+```
+
+
+## 🔧 Customization
+
+You can easily:
+
+* Add new categories
+* Connect to a backend API 
+* Add authentication
+* Turn Meal Planner into a database-driven feature
+
+---
+
+## 📌 Future Improvements (Optional)
+
+* User login system
+* Save meal plans to database
+* Recipe ratings & reviews
+* Drag-and-drop planner
+* Dark mode toggle
+* API integration (live recipes)
+
+---
+
+## 👩‍💻 Author
+
+Developed as a portfolio-ready React project to demonstrate:
+
+* Component architecture
+* State management
+* Routing
+* UI/UX design
+* Animations
+* Real-world app structure
+
+---
+
+## 📜 License
+
+This project is open-source and free to use for learning or portfolio purposes.
+
+---
+
+⭐ If you like this project, consider improving it further and making it your own!
