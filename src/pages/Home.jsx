@@ -467,7 +467,7 @@ const Home = () => {
 
       {/* FOOTER */}
       <footer className="bg-gradient-to-r from-orange-500 to-red-500 text-white
- text-gray-300 py-6 text-center">
+  py-6 text-center">
         &copy; {new Date().getFullYear()} Recipe Planner — By Aiman Mishal
       </footer>
     </div>
