@@ -58,11 +58,11 @@ const Home = () => {
     <div className="text-center md:text-left max-w-xl">
       <div className="text-6xl mb-6">🍳</div>
 
-      <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-white">
+ <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 !text-white">
   Cook Better. <br /> Plan Smarter.
 </h1>
 
-<p className="text-lg md:text-xl text-white mb-10">
+<p className="text-lg md:text-xl !text-white mb-10">
   Discover recipes you'll love, organize your weekly meals,
   and bring joy back to everyday cooking.
 </p>
@@ -106,7 +106,7 @@ const Home = () => {
 {/* ⭐ FEATURED SECTION */}
 <section className="px-6 py-20 max-w-7xl mx-auto animate-fadeUp">
   {/* Section Heading */}
-  <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 px-4 leading-snug">Featured Recipes</h2>
+  <h2 className="text-2xl sm:text-3xl font-extrabold text-center mb-10 px-4 leading-snug">Featured Recipes</h2>
 
 
   {/* Recipe Grid with floating cards */}
@@ -223,11 +223,14 @@ const Home = () => {
   <div className="max-w-7xl mx-auto text-center relative z-10 min-w-0">
     
     {/* Heading */}
-    <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6
-      bg-gradient-to-r from-orange-500 to-amber-500
-      bg-clip-text text-transparent px-2 leading-snug">
-      Cook Smarter, Not Harder
-    </h2>
+   <h2
+  className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6
+    bg-gradient-to-r from-orange-500 to-amber-500
+    bg-clip-text !text-transparent px-2 leading-snug"
+>
+  Cook Smarter, Not Harder
+</h2>
+
 
     {/* Subtitle */}
     <p className="text-gray-600 mb-12 sm:mb-16 max-w-2xl mx-auto text-base sm:text-lg px-3">
@@ -411,11 +414,11 @@ const Home = () => {
   <div className="relative max-w-3xl mx-auto">
     <div className="text-5xl mb-4">👩‍🍳</div>
 
-    <h2 className="text-4xl font-extrabold mb-4">
+    <h2 className="text-4xl !text-white font-extrabold mb-4">
       Let’s Turn Ideas Into Delicious Meals
     </h2>
 
-    <p className="text-lg mb-8 text-white/90">
+    <p className="text-lg mb-8 !text-white/90">
       Discover new flavors, organize your week, and enjoy stress-free cooking.
       Your kitchen journey starts right here.
     </p>
