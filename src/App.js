@@ -26,7 +26,7 @@ function App() {
         <div className="flex justify-between items-center">
 
           {/* Logo */}
-          <h1 className="text-2xl md:text-3xl font-extrabold tracking-wide">
+          <h1 className="text-2xl !text-white md:text-3xl font-extrabold tracking-wide">
             🍳 Recipe Planner
           </h1>
 

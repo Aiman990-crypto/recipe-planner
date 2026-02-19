@@ -42,7 +42,7 @@ const RecipeDetails = () => {
       {/* Title */}
       <h1 className="text-4xl font-bold mt-8 mb-4">{recipe.title}</h1>
 
-     <p className="text-gray-800 mb-6">{recipe.summary}</p>
+     <p className="!text-white-800 mb-6">{recipe.summary}</p>
 
 
       {/* Meta */}
@@ -54,7 +54,7 @@ const RecipeDetails = () => {
 
       {/* Ingredients */}
       <div className="mb-10">
-        <h2 className="text-2xl !text-white font-semibold mb-4">Ingredients</h2>
+        <h2 className="text-2xl !text-gray-900 font-semibold mb-4">Ingredients</h2>
         <ul className="list-disc pl-6 space-y-2">
           {recipe.ingredients.map((item, index) => (
             <li key={index}>{item}</li>
