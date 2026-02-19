@@ -58,14 +58,15 @@ const Home = () => {
     <div className="text-center md:text-left max-w-xl">
       <div className="text-6xl mb-6">🍳</div>
 
-      <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
-        Cook Better. <br /> Plan Smarter.
-      </h1>
+      <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-white">
+  Cook Better. <br /> Plan Smarter.
+</h1>
 
-      <p className="text-lg md:text-xl text-white/90 mb-10">
-        Discover recipes you'll love, organize your weekly meals,
-        and bring joy back to everyday cooking.
-      </p>
+<p className="text-lg md:text-xl text-white mb-10">
+  Discover recipes you'll love, organize your weekly meals,
+  and bring joy back to everyday cooking.
+</p>
+
 
       <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
         <Link
@@ -105,7 +106,7 @@ const Home = () => {
 {/* ⭐ FEATURED SECTION */}
 <section className="px-6 py-20 max-w-7xl mx-auto animate-fadeUp">
   {/* Section Heading */}
-  <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 px-4 leading-snug"></h2>
+  <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 px-4 leading-snug">Featured Recipes</h2>
 
 
   {/* Recipe Grid with floating cards */}
