@@ -43,7 +43,7 @@ const Home = () => {
     <div className="bg-gradient-to-b from-amber-50 via-orange-50 to-white min-h-screen">
 
 {/* 🔥 HERO SECTION */}
-<section className="relative py-24 px-6 text-center text-white overflow-hidden">
+<section className="relative py-24 px-6 text-center !text-white overflow-hidden">
 
   {/* Background Gradient (Food Theme) */}
   <div className="absolute inset-0 bg-gradient-to-br from-orange-400 via-amber-500 to-red-500"></div>
