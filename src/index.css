@@ -66,3 +66,13 @@
 .nav-item:hover::after {
   width: 100%;
 }
+/* Mobile readability fix */
+@media (max-width: 768px) {
+  p {
+    color: #374151 !important;  /* Tailwind gray-700 */
+  }
+
+  h1, h2, h3, h4 {
+    color: #111827 !important;  /* Tailwind gray-900 */
+  }
+}

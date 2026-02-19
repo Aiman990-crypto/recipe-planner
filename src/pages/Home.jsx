@@ -105,9 +105,8 @@ const Home = () => {
 {/* ⭐ FEATURED SECTION */}
 <section className="px-6 py-20 max-w-7xl mx-auto animate-fadeUp">
   {/* Section Heading */}
-  <h2 className="text-3xl font-bold text-center mb-10">
-    Featured Recipes
-  </h2>
+  <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 px-4 leading-snug"></h2>
+
 
   {/* Recipe Grid with floating cards */}
   <div className="grid md:grid-cols-4 gap-6">
@@ -125,69 +124,83 @@ const Home = () => {
 
 
 {/* 🌟 DISCOVER MEALS SECTION */}
-<section className="relative py-24 px-6 bg-gradient-to-b from-orange-50 to-orange-100 overflow-hidden">
-  
-  {/* Soft background glow */}
-  <div className="absolute top-0 left-1/3 w-72 h-72 bg-orange-300 opacity-20 blur-3xl rounded-full animate-pulse-slow"></div>
-  <div className="absolute bottom-0 right-1/3 w-72 h-72 bg-amber-300 opacity-20 blur-3xl rounded-full animate-pulse-slow"></div>
+<section className="relative py-20 sm:py-24 px-4 sm:px-6 bg-gradient-to-b from-orange-50 to-orange-100 overflow-hidden">
 
-  <div className="relative z-10 max-w-6xl mx-auto text-center">
+  {/* Soft background glow */}
+  <div className="absolute top-0 left-1/3 w-60 sm:w-72 h-60 sm:h-72 bg-orange-300 opacity-20 blur-3xl rounded-full animate-pulse-slow"></div>
+  <div className="absolute bottom-0 right-1/3 w-60 sm:w-72 h-60 sm:h-72 bg-amber-300 opacity-20 blur-3xl rounded-full animate-pulse-slow"></div>
+
+  <div className="relative z-10 max-w-6xl mx-auto text-center min-w-0">
+    
+    {/* Section Heading */}
     <motion.h2 
-      initial={{ opacity: 0, y: -50 }}
+      initial={{ opacity: 0.2, y: -30 }}   // prevent text disappearing on mobile
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="text-4xl font-extrabold text-gray-900 mb-4"
+      className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 px-2 leading-snug"
     >
       Discover Delicious Meals
     </motion.h2>
 
     <motion.p
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0.2, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.2 }}
-      className="text-gray-600 mb-12 text-lg max-w-3xl mx-auto"
+      className="text-gray-600 mb-10 sm:mb-12 text-base sm:text-lg max-w-3xl mx-auto px-3"
     >
       Explore our curated selection of recipes. Whether you're looking for a quick breakfast, a hearty dinner, or a healthy snack, we have something for everyone.
     </motion.p>
 
     {/* Cards */}
-    <div className="grid md:grid-cols-3 gap-8">
-      
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+
       {/* Card 1 */}
       <motion.div 
-        whileHover={{ scale: 1.05, rotateX: 5, rotateY: 5 }}
-        transition={{ type: "spring", stiffness: 300 }}
-        className="p-8 rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-transform transform perspective-1000"
+        whileHover={{ scale: 1.04 }}   // removed rotate (causes blur bug on phones)
+        transition={{ type: "spring", stiffness: 260 }}
+        className="p-6 sm:p-8 rounded-2xl bg-white shadow-lg hover:shadow-2xl transition w-full min-w-0"
       >
-        <div className="text-5xl mb-4">🍳</div>
-        <h3 className="text-xl font-semibold mb-3">Breakfast & Brunch</h3>
-        <p className="text-gray-600">
+        <div className="text-4xl sm:text-5xl mb-4">🍳</div>
+
+        <h3 className="text-lg sm:text-xl font-semibold mb-3 px-2 leading-snug">
+          Breakfast & Brunch
+        </h3>
+
+        <p className="text-gray-600 text-sm sm:text-base">
           Start your day right with quick and healthy breakfast recipes packed with flavor.
         </p>
       </motion.div>
 
       {/* Card 2 */}
       <motion.div 
-        whileHover={{ scale: 1.05, rotateX: 5, rotateY: -5 }}
-        transition={{ type: "spring", stiffness: 300 }}
-        className="p-8 rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-transform transform perspective-1000"
+        whileHover={{ scale: 1.04 }}
+        transition={{ type: "spring", stiffness: 260 }}
+        className="p-6 sm:p-8 rounded-2xl bg-white shadow-lg hover:shadow-2xl transition w-full min-w-0"
       >
-        <div className="text-5xl mb-4">🥗</div>
-        <h3 className="text-xl font-semibold mb-3">Healthy Choices</h3>
-        <p className="text-gray-600">
+        <div className="text-4xl sm:text-5xl mb-4">🥗</div>
+
+        <h3 className="text-lg sm:text-xl font-semibold mb-3 px-2 leading-snug">
+          Healthy Choices
+        </h3>
+
+        <p className="text-gray-600 text-sm sm:text-base">
           Find meals that are nutritious, balanced, and easy to prepare for a healthier lifestyle.
         </p>
       </motion.div>
 
       {/* Card 3 */}
       <motion.div 
-        whileHover={{ scale: 1.05, rotateX: -5, rotateY: 5 }}
-        transition={{ type: "spring", stiffness: 300 }}
-        className="p-8 rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-transform transform perspective-1000"
+        whileHover={{ scale: 1.04 }}
+        transition={{ type: "spring", stiffness: 260 }}
+        className="p-6 sm:p-8 rounded-2xl bg-white shadow-lg hover:shadow-2xl transition w-full min-w-0"
       >
-        <div className="text-5xl mb-4">🍰</div>
-        <h3 className="text-xl font-semibold mb-3">Desserts & Treats</h3>
-        <p className="text-gray-600">
+        <div className="text-4xl sm:text-5xl mb-4">🍰</div>
+
+        <h3 className="text-lg sm:text-xl font-semibold mb-3 px-2 leading-snug">
+          Desserts & Treats
+        </h3>
+
+        <p className="text-gray-600 text-sm sm:text-base">
           Indulge in our delicious desserts, from chocolatey brownies to creamy ice creams.
         </p>
       </motion.div>
@@ -199,36 +212,45 @@ const Home = () => {
 
 
 
-    {/* 🌟 WHY CHOOSE US */}
-<section className="relative py-24 px-6 overflow-hidden bg-gradient-to-br from-orange-50 via-white to-amber-50">
+   {/* 🌟 WHY CHOOSE US */}
+<section className="relative py-20 sm:py-24 px-4 sm:px-6 overflow-hidden bg-gradient-to-br from-orange-50 via-white to-amber-50">
 
   {/* Background Glow */}
-  <div className="absolute -top-20 -left-20 w-72 h-72 bg-orange-200 rounded-full blur-3xl opacity-30"></div>
-  <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-yellow-200 rounded-full blur-3xl opacity-30"></div>
+  <div className="absolute -top-20 -left-20 w-60 sm:w-72 h-60 sm:h-72 bg-orange-200 rounded-full blur-3xl opacity-30"></div>
+  <div className="absolute -bottom-20 -right-20 w-60 sm:w-72 h-60 sm:h-72 bg-yellow-200 rounded-full blur-3xl opacity-30"></div>
 
-  <div className="max-w-7xl mx-auto text-center relative z-10">
-    <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">
+  <div className="max-w-7xl mx-auto text-center relative z-10 min-w-0">
+    
+    {/* Heading */}
+    <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6
+      bg-gradient-to-r from-orange-500 to-amber-500
+      bg-clip-text text-transparent px-2 leading-snug">
       Cook Smarter, Not Harder
     </h2>
 
-    <p className="text-gray-600 mb-16 max-w-2xl mx-auto text-lg">
+    {/* Subtitle */}
+    <p className="text-gray-600 mb-12 sm:mb-16 max-w-2xl mx-auto text-base sm:text-lg px-3">
       Discover meals, stay organized, and enjoy cooking without the daily stress.
       Your kitchen companion for a calmer, tastier week.
     </p>
 
-    <div className="grid md:grid-cols-3 gap-10">
+    {/* Cards */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-10">
 
       {/* Card 1 */}
-      <div className="group p-10 rounded-2xl backdrop-blur-lg bg-white/70 border border-orange-100
-        shadow-lg transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl">
+      <div className="group p-6 sm:p-10 rounded-2xl backdrop-blur-md bg-white/80 border border-orange-100
+        shadow-lg transition-all duration-500 hover:-translate-y-2 sm:hover:-translate-y-4 hover:shadow-2xl
+        w-full min-w-0">
 
-        <div className="text-5xl mb-6 transition-transform duration-500 group-hover:scale-125">
+        <div className="text-4xl sm:text-5xl mb-6 transition-transform duration-500 group-hover:scale-110">
           ⚡
         </div>
 
-        <h3 className="text-2xl font-semibold mb-4">Quick Discovery</h3>
+        <h3 className="text-lg sm:text-2xl font-semibold mb-4 px-1 leading-snug">
+          Quick Discovery
+        </h3>
 
-        <p className="text-gray-600 leading-relaxed">
+        <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
           Instantly browse curated recipes and find something delicious
           in seconds — no endless scrolling.
         </p>
@@ -238,16 +260,19 @@ const Home = () => {
       </div>
 
       {/* Card 2 */}
-      <div className="group p-10 rounded-2xl backdrop-blur-lg bg-white/70 border border-orange-100
-        shadow-lg transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl">
+      <div className="group p-6 sm:p-10 rounded-2xl backdrop-blur-md bg-white/80 border border-orange-100
+        shadow-lg transition-all duration-500 hover:-translate-y-2 sm:hover:-translate-y-4 hover:shadow-2xl
+        w-full min-w-0">
 
-        <div className="text-5xl mb-6 transition-transform duration-500 group-hover:scale-125">
+        <div className="text-4xl sm:text-5xl mb-6 transition-transform duration-500 group-hover:scale-110">
           🧠
         </div>
 
-        <h3 className="text-2xl font-semibold mb-4">Smart Planning</h3>
+        <h3 className="text-lg sm:text-2xl font-semibold mb-4 px-1 leading-snug">
+          Smart Planning
+        </h3>
 
-        <p className="text-gray-600 leading-relaxed">
+        <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
           Organize your weekly meals visually with drag-and-drop simplicity.
           Planning becomes effortless.
         </p>
@@ -257,16 +282,19 @@ const Home = () => {
       </div>
 
       {/* Card 3 */}
-      <div className="group p-10 rounded-2xl backdrop-blur-lg bg-white/70 border border-orange-100
-        shadow-lg transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl">
+      <div className="group p-6 sm:p-10 rounded-2xl backdrop-blur-md bg-white/80 border border-orange-100
+        shadow-lg transition-all duration-500 hover:-translate-y-2 sm:hover:-translate-y-4 hover:shadow-2xl
+        w-full min-w-0">
 
-        <div className="text-5xl mb-6 transition-transform duration-500 group-hover:scale-125">
+        <div className="text-4xl sm:text-5xl mb-6 transition-transform duration-500 group-hover:scale-110">
           ❤️
         </div>
 
-        <h3 className="text-2xl font-semibold mb-4">Save What You Love</h3>
+        <h3 className="text-lg sm:text-2xl font-semibold mb-4 px-1 leading-snug">
+          Save What You Love
+        </h3>
 
-        <p className="text-gray-600 leading-relaxed">
+        <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
           Build your personal collection of favorite meals
           for quick access anytime you need inspiration.
         </p>
@@ -403,7 +431,10 @@ const Home = () => {
 
 <section className="bg-orange-50 py-20 px-6">
   <div className="max-w-7xl mx-auto text-center">
-    <h2 className="text-4xl font-bold mb-12">What Our Users Say</h2>
+    <h2 className="text-2xl sm:text-4xl font-bold mb-12 text-gray-900 text-center">
+  What Our Users Say
+</h2>
+
 
     <Swiper
       modules={[EffectCoverflow, Pagination, Autoplay]}
@@ -441,25 +472,41 @@ const Home = () => {
 
 <section className="py-20 px-6 bg-white">
   <div className="max-w-5xl mx-auto text-center mb-10">
-    <h2 className="text-4xl font-bold">Frequently Asked Questions</h2>
+    <h2 className="text-3xl sm:text-4xl font-bold">Frequently Asked Questions</h2>
   </div>
 
   <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
     <div>
-      <h4 className="font-semibold mb-2">Can I save my favorite recipes?</h4>
-      <p className="text-gray-600">Yes! You can easily save any recipe to your personal collection for quick access.</p>
+      <h4 className="text-lg sm:text-xl font-semibold mb-3 text-gray-800">
+        Can I save my favorite recipes?
+      </h4>
+      <p className="text-gray-600 text-base sm:text-lg">
+        Yes! You can easily save any recipe to your personal collection for quick access.
+      </p>
     </div>
     <div>
-      <h4 className="font-semibold mb-2">Is the meal planner free?</h4>
-      <p className="text-gray-600">Absolutely. Our basic planner and recipe access are completely free to use.</p>
+      <h4 className="text-lg sm:text-xl font-semibold mb-3 text-gray-800">
+        Is the meal planner free?
+      </h4>
+      <p className="text-gray-600 text-base sm:text-lg">
+        Absolutely. Our basic planner and recipe access are completely free to use.
+      </p>
     </div>
     <div>
-      <h4 className="font-semibold mb-2">Can I search by dietary preferences?</h4>
-      <p className="text-gray-600">Yes, you can filter recipes by categories like vegan, vegetarian, gluten-free, and more.</p>
+      <h4 className="text-lg sm:text-xl font-semibold mb-3 text-gray-800">
+        Can I search by dietary preferences?
+      </h4>
+      <p className="text-gray-600 text-base sm:text-lg">
+        Yes, you can filter recipes by categories like vegan, vegetarian, gluten-free, and more.
+      </p>
     </div>
     <div>
-      <h4 className="font-semibold mb-2">Do you provide weekly meal plans?</h4>
-      <p className="text-gray-600">Yes, you can generate weekly meal plans with just a few clicks in the planner.</p>
+      <h4 className="text-lg sm:text-xl font-semibold mb-3 text-gray-800">
+        Do you provide weekly meal plans?
+      </h4>
+      <p className="text-gray-600 text-base sm:text-lg">
+        Yes, you can generate weekly meal plans with just a few clicks in the planner.
+      </p>
     </div>
   </div>
 </section>

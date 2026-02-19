@@ -42,10 +42,12 @@ const RecipeDetails = () => {
       {/* Title */}
       <h1 className="text-4xl font-bold mt-8 mb-4">{recipe.title}</h1>
 
-      <p className="text-gray-600 mb-6">{recipe.summary}</p>
+     <p className="text-gray-800 mb-6">{recipe.summary}</p>
+
 
       {/* Meta */}
-      <div className="flex gap-6 mb-10 text-sm text-gray-500">
+      <div className="flex gap-6 mb-10 text-sm text-gray-700">
+
         <span>⏱ {recipe.prepTime}</span>
         <span>🍽 Serves {recipe.servings}</span>
       </div>

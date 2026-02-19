@@ -14,15 +14,18 @@ const RecipesPage = () => {
   });
 
   return (
-    <div className="bg-orange-50 min-h-screen py-16 px-6">
-      <h1 className="text-4xl font-bold text-center mb-10">All Recipes</h1>
+    <div className="bg-orange-50 min-h-screen py-16 px-4 sm:px-6 lg:px-8">
+      {/* Page Heading */}
+      <h1 className="text-2xl sm:text-4xl font-bold text-center mb-10 text-gray-900">
+        All Recipes
+      </h1>
 
       {/* Search */}
       <div className="max-w-xl mx-auto mb-6">
         <input
           type="text"
           placeholder="Search recipes..."
-          className="w-full p-3 border rounded-lg shadow-sm"
+          className="w-full p-3 border rounded-lg shadow-sm text-base sm:text-lg"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
@@ -34,7 +37,7 @@ const RecipesPage = () => {
           <button
             key={cat}
             onClick={() => setSelectedCategory(cat)}
-            className={`px-4 py-2 rounded-full border transition ${
+            className={`px-3 sm:px-4 py-2 rounded-full border text-sm sm:text-base transition ${
               selectedCategory === cat
                 ? "bg-orange-500 text-white"
                 : "bg-white hover:bg-orange-100"
